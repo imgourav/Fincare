@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Account | FinCare</title>
+  <meta name="description" content="Request deletion of your FinCare account and associated data. Learn how to delete your account and what data we remove.">
+  <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2::before {
+      content: '';
+      width: 4px;
+      height: 1.25em;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .steps {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      padding: 1rem 0;
+      padding-left: 2.5rem;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .steps li:last-child {
+      border-bottom: none;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+      border: 1px solid #5eead4;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .cta-box strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+
+    .cta-box a {
+      color: var(--primary-dark);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .cta-box a:hover {
+      text-decoration: underline;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table th {
+      font-weight: 600;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .badge-deleted {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge-retained {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .retention-note {
+      background: #fef9c3;
+      border-left: 4px solid #eab308;
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">FinCare</div>
+      <h1>Delete Your Account & Data</h1>
+      <p class="subtitle">Request permanent deletion of your FinCare account and associated personal data</p>
+    </header>
+
+    <section class="card">
+      <h2>How to Request Account Deletion</h2>
+      <p style="margin-bottom: 1rem;">To delete your FinCare account and associated data, follow these steps:</p>
+      <ol class="steps">
+        <li><strong>Open the FinCare app</strong> on your Android device and sign in to your account.</li>
+        <li><strong>Go to Settings</strong> → Tap your profile or account icon → Select <strong>Account Settings</strong>.</li>
+        <li><strong>Tap "Delete Account"</strong> and follow the on-screen instructions to confirm your request.</li>
+        <li><strong>Alternatively</strong>, you can email us directly to request deletion (see below).</li>
+      </ol>
+
+      <div class="cta-box">
+        <strong>Request deletion by email</strong>
+        If you cannot access the app, email us at:<br>
+        <a href="mailto:privacy@fincare.app?subject=Account%20Deletion%20Request">privacy@fincare.app</a><br>
+        <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">Include your registered email address so we can identify your account.</small>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What Data We Delete</h2>
+      <p style="margin-bottom: 1rem;">When you request account deletion, FinCare will permanently delete the following data associated with your account:</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account credentials (email, password)</td>
+            <td><span class="badge badge-deleted">Deleted</span></td>
+          </tr>
+          <tr>
+            <td>Profile information (name)</td>
+            <td><span class="badge badge-deleted">Deleted</span></td>
+          </tr>
+          <tr>
+            <td>Budget and savings data</td>
+            <td><span class="badge badge-deleted">Deleted</span></td>
+          </tr>
+          <tr>
+            <td>App preferences and settings</td>
+            <td><span class="badge badge-deleted">Deleted</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>What to Expect</h2>
+      <ul style="padding-left: 1.25rem; margin-top: 0.5rem;">
+        <li>Deletion requests are typically processed within <strong>30 days</strong>.</li>
+        <li>You will receive a confirmation email once your account and data have been deleted.</li>
+        <li>If you have an active subscription, you may need to cancel it before deletion. Contact support if you need help.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>FinCare — Your personal finance companion</p>
+    </footer>
+  </div>
+</body>
+</html>
